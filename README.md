@@ -1,54 +1,92 @@
-# custom-containers-cpp
+# Custom Containers in C++
 
-Небольшой учебный проект с собственной реализацией контейнеров на C++:
+An educational C++ project that implements custom data structures and container abstractions from scratch.
 
-- `LinkedByteList` — двусвязный список для произвольных бинарных данных
-- `ByteHashSet` — hash set с разрешением коллизий через цепочки
-- `NaryByteTree` — n-арное дерево с preorder-итерацией
-- `HeapMemoryManager` — простой менеджер памяти, который считает выделенные байты
+## Overview
 
-## Структура
+This repository contains several custom container implementations written in C++.  
+The goal of the project is to explore how common data structures can be designed without relying entirely on the STL and to better understand internal container organization, iteration, and memory ownership.
+
+The project includes implementations of:
+
+- linked list
+- hash-based set
+- tree structure
+- supporting memory-related abstractions
+
+This repository was created as a practical exercise in low-level programming, abstraction design, and data structure implementation.
+
+## Features
+
+- custom container interfaces
+- linked list implementation
+- hash-based set
+- tree structure
+- iterator-style traversal
+- basic memory abstraction layer
+
+## Project Structure
 
 ```text
-include/
-  common/
-  core/
-  list/
-  memory/
-  set/
-  tree/
-src/
-tests/
-CMakeLists.txt
+.
+├── include/        # header files
+├── src/            # source files
+├── tests/          # smoke tests / examples
+├── CMakeLists.txt
+└── README.md
 ```
 
-## Сборка
+## Build
 
 ```bash
 cmake -S . -B build
 cmake --build build
+```
+
+## Run
+
+```bash
 ./build/containers_demo
 ```
 
-## Тесты
+## Tests
 
 ```bash
 ctest --test-dir build --output-on-failure
 ```
 
-## Почему такая архитектура
+## Educational Value
 
-Проект сделан как самостоятельная реализация с нуля:
+This project helps practice:
 
-- единый нейминг
-- предсказуемое владение памятью
-- нормальная очистка ресурсов
-- отдельные контейнеры с независимой логикой
-- минимальный smoke test
+- implementation of classical data structures
+- low-level design in C++
+- iterator-oriented access patterns
+- manual reasoning about memory ownership
+- creation of reusable abstractions
 
-## Что можно улучшить дальше
+## What This Project Demonstrates
 
-- добавить шаблонные контейнеры вместо хранения `void*`
-- сделать `const`-итераторы
-- вынести дерево и set в `.cpp`
-- добавить полноценные unit-тесты
+- understanding of core data structures
+- practical work with pointers and ownership
+- abstraction of common container behavior
+- separation of interface and implementation
+- educational approach to systems-level programming
+
+## Possible Improvements
+
+- add templates for stronger type safety
+- extend iterator support
+- improve STL-style compatibility
+- add more complete tests
+- include performance benchmarks
+- document internal design decisions in more detail
+
+## Tech Stack
+
+- C++
+- CMake
+
+## Notes
+
+This is an educational project focused on understanding container internals and low-level programming concepts.
