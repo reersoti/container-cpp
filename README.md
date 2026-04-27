@@ -34,6 +34,7 @@ This repository was created as a practical exercise in low-level programming, ab
 ├── include/        # header files
 ├── src/            # source files
 ├── tests/          # smoke tests / examples
+├── docs/           # design notes and documentation
 ├── CMakeLists.txt
 └── README.md
 ```
@@ -56,6 +57,10 @@ cmake --build build
 ```bash
 ctest --test-dir build --output-on-failure
 ```
+
+## Documentation
+
+- [Design Notes](docs/DESIGN_NOTES.md)
 
 ## Continuous Integration
 
