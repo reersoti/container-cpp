@@ -1,5 +1,7 @@
 # Custom Containers in C++
 
+![CMake CI](https://github.com/reersoti/container-cpp/actions/workflows/cmake.yml/badge.svg)
+
 An educational C++ project that implements custom data structures and container abstractions from scratch.
 
 ## Overview
@@ -55,6 +57,10 @@ cmake --build build
 ctest --test-dir build --output-on-failure
 ```
 
+## Continuous Integration
+
+The repository includes a GitHub Actions workflow that automatically builds the project and runs tests on every push and pull request to `main`.
+
 ## Educational Value
 
 This project helps practice:
@@ -84,8 +90,10 @@ This project helps practice:
 
 ## Tech Stack
 
-- C++
+- C++20
 - CMake
+- CTest
+- GitHub Actions
 
 ## Notes
 
